@@ -9,7 +9,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-			<?php expound_posted_on(); ?>
+			<?php riopost_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
