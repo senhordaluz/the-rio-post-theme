@@ -1,6 +1,5 @@
 body {
   background: #19596e;
-  /*background: #999;*/
 
   font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -1300,4 +1299,23 @@ a.wpm-button:hover {
   #page {
     width: 85%;
   }
+}
+
+/* Caixa do autor */
+.author_bio_section{
+  background: none repeat scroll 0 0 rgba(0, 185, 235, 0.05);
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.author_name{
+  font-size:16px;
+  font-weight: bold;
+}
+
+.author_details img {
+  border: 1px solid #D8D8D8;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
 }
