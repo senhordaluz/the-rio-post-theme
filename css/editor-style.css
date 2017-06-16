@@ -1,4 +1,5 @@
 @import url('reset.css');
+@import url('riopost.css?v=20170616');
 
 body {
 	background: #f3f3f3 url('../images/editor-style-bg.png') 0 0 repeat-y;

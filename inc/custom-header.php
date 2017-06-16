@@ -110,16 +110,19 @@ function expound_header_style() {
 		@media only screen and (min-device-width: 450px) and (max-device-width: 1020px) {
 			.site-header .site-branding {
 				height: auto;
+				height: 11rem;
 			}
 		}
 		@media only screen and (min-device-width: 300px) and (max-device-width: 450px) {
 			.site-header .site-branding {
 				height: 50px;
+				height: 6rem;
 			}
 		}
 		@media only screen and (max-device-width: 300px) {
 			.site-header .site-branding {
 				height: 30px;
+				height: 5rem;
 			}
 		}
 	<?php endif; ?>
