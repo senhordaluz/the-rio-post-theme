@@ -296,16 +296,17 @@ function wpb_author_info_box( $content ) {
 		if ( empty( $display_name ) )
 			$display_name = get_the_author_meta( 'nickname', $post->post_author );
 
-		if ( $display_name != 'Colaborador' ) {
+		// Get author's biographical information or description
+		$user_description = get_the_author_meta( 'user_description', $post->post_author );
 
-			// Get author's biographical information or description
-			$user_description = get_the_author_meta( 'user_description', $post->post_author );
+		// Get author's website URL 
+		$user_website = get_the_author_meta('url', $post->post_author);
 
-			// Get author's website URL 
-			$user_website = get_the_author_meta('url', $post->post_author);
+		// Get link to the author archive page
+		$user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
 
-			// Get link to the author archive page
-			$user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
+		if ( $display_name != 'Colaborador' &&
+			( ! empty( $user_description ) ) ) {
 			 
 			if ( ! empty( $display_name ) )
 				$author_details = '<p class="author_name">Sobre ' . $display_name . '</p>';
