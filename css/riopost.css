@@ -1301,6 +1301,10 @@ a.wpm-button:hover {
   }
 }
 
+.entry-content p {
+  text-indent: 2rem;
+}
+
 /* Caixa do autor */
 .author_bio_section{
   background: none repeat scroll 0 0 rgba(0, 185, 235, 0.05);
@@ -1324,4 +1328,7 @@ a.wpm-button:hover {
   float: left;
   margin: 0 10px 10px 0;
   margin: 0 1rem 1rem 0;
+}
+.author_bio_section p {
+  text-indent: 0;
 }
