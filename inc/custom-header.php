@@ -95,13 +95,45 @@ function expound_header_style() {
 	<?php endif; ?>
 
 	<?php if ( ! empty( $header_image ) ) : ?>
-		.site-header .site-branding {
-			background-color: transparent;
-			background-image: url('<?php echo esc_url( $header_image ); ?>');
-			background-position: 50% 0;
-			background-repeat: no-repeat;
-			background-size: contain;
-			height: <?php echo absint( get_custom_header()->height ); ?>px;
+		@media only screen and (min-device-width: 1020px) {
+			.site-header .site-branding {
+				background-color: transparent;
+				background-image: url('<?php echo esc_url( $header_image ); ?>');
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: <?php echo absint( get_custom_header()->height ); ?>px;
+			}
+		}
+		@media only screen and (min-device-width: 450px) and (max-device-width: 1020px) {
+			.site-header .site-branding {
+				background-color: transparent;
+				background-image: url('<?php echo esc_url( $header_image ); ?>');
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: auto;
+			}
+		}
+		@media only screen and (min-device-width: 300px) and (max-device-width: 450px) {
+			.site-header .site-branding {
+				background-color: transparent;
+				background-image: url('<?php echo esc_url( $header_image ); ?>');
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 50px;
+			}
+		}
+		@media only screen and (max-device-width: 300px) {
+			.site-header .site-branding {
+				background-color: transparent;
+				background-image: url('<?php echo esc_url( $header_image ); ?>');
+				background-position: 50% 0;
+				background-repeat: no-repeat;
+				background-size: contain;
+				height: 30px;
+			}
 		}
 	<?php endif; ?>
 	</style>
