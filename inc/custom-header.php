@@ -3,7 +3,7 @@
  * Custom Header
  */
 
-function expound_custom_header_setup() {
+function riopost_custom_header_setup() {
 	/**
 	 * Custom Header support
 	 */
@@ -12,14 +12,14 @@ function expound_custom_header_setup() {
 		'width'                  => 1020,
         'height'                 => 154,
         'flex-height'            => true,
-        'wp-head-callback'       => 'expound_header_style',
-        'admin-head-callback'    => 'expound_admin_header_style',
+        'wp-head-callback'       => 'riopost_header_style',
+        'admin-head-callback'    => 'riopost_admin_header_style',
 	) );
 }
-add_action( 'after_setup_theme', 'expound_custom_header_setup' );
+add_action( 'after_setup_theme', 'riopost_custom_header_setup' );
 
-if ( ! function_exists( 'expound_admin_header_style' ) ) :
-function expound_admin_header_style() {
+if ( ! function_exists( 'riopost_admin_header_style' ) ) :
+function riopost_admin_header_style() {
 	?>
 	<style type="text/css">
 	#headimg {
@@ -54,8 +54,8 @@ function expound_admin_header_style() {
 }
 endif;
 
-if ( ! function_exists( 'expound_header_style' ) ) :
-function expound_header_style() {
+if ( ! function_exists( 'riopost_header_style' ) ) :
+function riopost_header_style() {
 	$color = get_header_textcolor();
 	$default_color = get_theme_support( 'custom-header', 'default-text-color' );
 	$header_image = get_header_image();

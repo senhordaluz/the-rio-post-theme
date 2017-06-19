@@ -25,12 +25,16 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'expound_header_before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<div class="site-title-group">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		<?php if ( get_header_textcolor() != get_theme_support( 'custom-header', 'default-text-color' ) ): ?>
+			<a class="site-branding" style="display:block" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
+		<?php else: ?>
+			<div class="site-branding">
+				<div class="site-title-group">
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'expound' ); ?></h1>
@@ -40,7 +44,7 @@
 			<?php wp_nav_menu( array(
 				'theme_location' => 'social',
 				'depth' => 1,
-				'container_id' => 'expound-social',
+				'container_id' => 'riopost-social',
 				'link_before' => '<span>',
 				'link_after' => '</span>',
 				'fallback_cb' => '',
